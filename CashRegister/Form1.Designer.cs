@@ -30,17 +30,17 @@
         {
             this.bananaTitle = new System.Windows.Forms.Label();
             this.airpodsLabel = new System.Windows.Forms.Label();
-            this.airpodsBox = new System.Windows.Forms.TextBox();
+            this.airpodsInput = new System.Windows.Forms.TextBox();
             this.phonesLabel = new System.Windows.Forms.Label();
-            this.phonesBox = new System.Windows.Forms.TextBox();
-            this.laptopsBox = new System.Windows.Forms.TextBox();
+            this.phonesInput = new System.Windows.Forms.TextBox();
+            this.laptopsInput = new System.Windows.Forms.TextBox();
             this.laptopsLabel = new System.Windows.Forms.Label();
             this.calculate = new System.Windows.Forms.Button();
             this.subtotalLabel = new System.Windows.Forms.Label();
             this.taxLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.tenderedLabel = new System.Windows.Forms.Label();
-            this.tenderedBox = new System.Windows.Forms.TextBox();
+            this.tenderedInput = new System.Windows.Forms.TextBox();
             this.subtotalOutput = new System.Windows.Forms.Label();
             this.taxOutput = new System.Windows.Forms.Label();
             this.totalOutput = new System.Windows.Forms.Label();
@@ -74,13 +74,13 @@
             this.airpodsLabel.Text = "Number of Airpods";
             this.airpodsLabel.Click += new System.EventHandler(this.airpodsLabel_Click);
             // 
-            // airpodsBox
+            // airpodsInput
             // 
-            this.airpodsBox.Location = new System.Drawing.Point(214, 81);
-            this.airpodsBox.Name = "airpodsBox";
-            this.airpodsBox.Size = new System.Drawing.Size(67, 20);
-            this.airpodsBox.TabIndex = 2;
-            this.airpodsBox.TextChanged += new System.EventHandler(this.airpodsBox_TextChanged);
+            this.airpodsInput.Location = new System.Drawing.Point(214, 81);
+            this.airpodsInput.Name = "airpodsInput";
+            this.airpodsInput.Size = new System.Drawing.Size(67, 20);
+            this.airpodsInput.TabIndex = 2;
+            this.airpodsInput.TextChanged += new System.EventHandler(this.airpodsBox_TextChanged);
             // 
             // phonesLabel
             // 
@@ -92,19 +92,19 @@
             this.phonesLabel.TabIndex = 3;
             this.phonesLabel.Text = "Number of Phones";
             // 
-            // phonesBox
+            // phonesInput
             // 
-            this.phonesBox.Location = new System.Drawing.Point(214, 125);
-            this.phonesBox.Name = "phonesBox";
-            this.phonesBox.Size = new System.Drawing.Size(67, 20);
-            this.phonesBox.TabIndex = 4;
+            this.phonesInput.Location = new System.Drawing.Point(214, 125);
+            this.phonesInput.Name = "phonesInput";
+            this.phonesInput.Size = new System.Drawing.Size(67, 20);
+            this.phonesInput.TabIndex = 4;
             // 
-            // laptopsBox
+            // laptopsInput
             // 
-            this.laptopsBox.Location = new System.Drawing.Point(214, 167);
-            this.laptopsBox.Name = "laptopsBox";
-            this.laptopsBox.Size = new System.Drawing.Size(67, 20);
-            this.laptopsBox.TabIndex = 5;
+            this.laptopsInput.Location = new System.Drawing.Point(214, 167);
+            this.laptopsInput.Name = "laptopsInput";
+            this.laptopsInput.Size = new System.Drawing.Size(67, 20);
+            this.laptopsInput.TabIndex = 5;
             // 
             // laptopsLabel
             // 
@@ -145,9 +145,10 @@
             this.taxLabel.Font = new System.Drawing.Font("Verdana", 10.75F, System.Drawing.FontStyle.Bold);
             this.taxLabel.Location = new System.Drawing.Point(397, 127);
             this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(114, 18);
+            this.taxLabel.Size = new System.Drawing.Size(44, 18);
             this.taxLabel.TabIndex = 9;
-            this.taxLabel.Text = "Tax Amount:";
+            this.taxLabel.Text = "Tax:";
+            this.taxLabel.Click += new System.EventHandler(this.taxLabel_Click);
             // 
             // totalLabel
             // 
@@ -169,21 +170,20 @@
             this.tenderedLabel.TabIndex = 11;
             this.tenderedLabel.Text = "Tendered:";
             // 
-            // tenderedBox
+            // tenderedInput
             // 
-            this.tenderedBox.Location = new System.Drawing.Point(547, 226);
-            this.tenderedBox.Name = "tenderedBox";
-            this.tenderedBox.Size = new System.Drawing.Size(67, 20);
-            this.tenderedBox.TabIndex = 12;
+            this.tenderedInput.Location = new System.Drawing.Point(547, 226);
+            this.tenderedInput.Name = "tenderedInput";
+            this.tenderedInput.Size = new System.Drawing.Size(67, 20);
+            this.tenderedInput.TabIndex = 12;
             // 
             // subtotalOutput
             // 
             this.subtotalOutput.AutoSize = true;
             this.subtotalOutput.Location = new System.Drawing.Point(562, 87);
             this.subtotalOutput.Name = "subtotalOutput";
-            this.subtotalOutput.Size = new System.Drawing.Size(35, 13);
+            this.subtotalOutput.Size = new System.Drawing.Size(0, 13);
             this.subtotalOutput.TabIndex = 13;
-            this.subtotalOutput.Text = "label1";
             // 
             // taxOutput
             // 
@@ -214,6 +214,7 @@
             this.calculateChange.TabIndex = 16;
             this.calculateChange.Text = "Calculate Change";
             this.calculateChange.UseVisualStyleBackColor = false;
+            this.calculateChange.Click += new System.EventHandler(this.calculateChange_Click);
             // 
             // changeLabel
             // 
@@ -254,6 +255,7 @@
             this.printReceipt.TabIndex = 20;
             this.printReceipt.Text = "Print Receipt";
             this.printReceipt.UseVisualStyleBackColor = false;
+            this.printReceipt.Click += new System.EventHandler(this.printReceipt_Click);
             // 
             // newOrder
             // 
@@ -282,17 +284,17 @@
             this.Controls.Add(this.totalOutput);
             this.Controls.Add(this.taxOutput);
             this.Controls.Add(this.subtotalOutput);
-            this.Controls.Add(this.tenderedBox);
+            this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.tenderedLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.taxLabel);
             this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.calculate);
             this.Controls.Add(this.laptopsLabel);
-            this.Controls.Add(this.laptopsBox);
-            this.Controls.Add(this.phonesBox);
+            this.Controls.Add(this.laptopsInput);
+            this.Controls.Add(this.phonesInput);
             this.Controls.Add(this.phonesLabel);
-            this.Controls.Add(this.airpodsBox);
+            this.Controls.Add(this.airpodsInput);
             this.Controls.Add(this.airpodsLabel);
             this.Controls.Add(this.bananaTitle);
             this.ForeColor = System.Drawing.Color.White;
@@ -307,17 +309,17 @@
 
         private System.Windows.Forms.Label bananaTitle;
         private System.Windows.Forms.Label airpodsLabel;
-        private System.Windows.Forms.TextBox airpodsBox;
+        private System.Windows.Forms.TextBox airpodsInput;
         private System.Windows.Forms.Label phonesLabel;
-        private System.Windows.Forms.TextBox phonesBox;
-        private System.Windows.Forms.TextBox laptopsBox;
+        private System.Windows.Forms.TextBox phonesInput;
+        private System.Windows.Forms.TextBox laptopsInput;
         private System.Windows.Forms.Label laptopsLabel;
         private System.Windows.Forms.Button calculate;
         private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label tenderedLabel;
-        private System.Windows.Forms.TextBox tenderedBox;
+        private System.Windows.Forms.TextBox tenderedInput;
         private System.Windows.Forms.Label subtotalOutput;
         private System.Windows.Forms.Label taxOutput;
         private System.Windows.Forms.Label totalOutput;
