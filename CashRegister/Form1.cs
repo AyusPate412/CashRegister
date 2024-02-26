@@ -60,13 +60,18 @@ namespace CashRegister
                 taxOutput.Text = $"{taxAmount.ToString("C")}";
 
                 totalPrice = subtotal + taxAmount;
-                totalOutput.Text = $"{totalPrice.ToString("C")}";              
+                totalOutput.Text = $"{totalPrice.ToString("C")}";   
+                
+                calculateChange.Enabled = true;
+                calculateChange.FlatAppearance.BorderColor = Color.Green;
+                calculateChange.FlatAppearance.BorderSize = 1;
             }
             catch 
             {
                 subtotalOutput.Text = "ERROR";
                 taxOutput.Text = "ERROR";
                 totalOutput.Text = "ERROR";
+                tenderedInput.Enabled = false;
             }
         }
 
@@ -85,11 +90,20 @@ namespace CashRegister
 
                 double change = moneyTendered - totalPrice;
                 changeOutput.Text = $"{change.ToString("C")}";
+
+                printReceipt.Enabled = true;
+                printReceipt.FlatAppearance.BorderColor = Color.Green;
+                printReceipt.FlatAppearance.BorderSize = 1;
             }
             catch 
             {
                 changeOutput.Text = "ERROR";
             }
+            if (moneyTendered < totalPrice)
+            {
+                
+            }
+
         }
 
         private void printReceipt_Click(object sender, EventArgs e)
@@ -122,6 +136,9 @@ namespace CashRegister
             Refresh();
             receiptOutput.Text += $"\n\n Have a Nice Day!!";
 
+            newOrder.Enabled = true;
+            newOrder.FlatAppearance.BorderColor = Color.Green;
+            newOrder.FlatAppearance.BorderSize = 1;
         }
 
         private void newOrder_Click(object sender, EventArgs e)
@@ -140,9 +157,28 @@ namespace CashRegister
             receiptOutput.Text = "";
 
             calculateChange.Enabled = false;
-            printReceipt.Enabled = false;
+            calculateChange.FlatAppearance.BorderColor = Color.Red;
+            calculateChange.FlatAppearance.BorderSize = 4;
 
-            calculateChange.ForeColor = Color.Orange;
+            printReceipt.Enabled = false;
+            printReceipt.FlatAppearance.BorderColor = Color.Red;
+            printReceipt.FlatAppearance.BorderSize = 4;
+
+            newOrder.Enabled = false;
+            newOrder.FlatAppearance.BorderColor = Color.Red;
+            newOrder.FlatAppearance.BorderSize = 4;
+
+            numOfAirpods = 0;
+            numOfPhones = 0;
+            numOfLaptops = 0;
+
+            moneyTendered = 0;
+            change = 0;
+
+            subtotal = 0;
+            taxAmount = 0;
+            totalPrice = 0;
+            tendered = 0;
         }
     }
 }

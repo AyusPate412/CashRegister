@@ -119,6 +119,7 @@
             // calculate
             // 
             this.calculate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.calculate.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.calculate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculate.ForeColor = System.Drawing.Color.Gold;
             this.calculate.Location = new System.Drawing.Point(40, 203);
@@ -190,23 +191,23 @@
             this.taxOutput.AutoSize = true;
             this.taxOutput.Location = new System.Drawing.Point(562, 132);
             this.taxOutput.Name = "taxOutput";
-            this.taxOutput.Size = new System.Drawing.Size(35, 13);
+            this.taxOutput.Size = new System.Drawing.Size(0, 13);
             this.taxOutput.TabIndex = 14;
-            this.taxOutput.Text = "label1";
             // 
             // totalOutput
             // 
             this.totalOutput.AutoSize = true;
             this.totalOutput.Location = new System.Drawing.Point(562, 169);
             this.totalOutput.Name = "totalOutput";
-            this.totalOutput.Size = new System.Drawing.Size(35, 13);
+            this.totalOutput.Size = new System.Drawing.Size(0, 13);
             this.totalOutput.TabIndex = 15;
-            this.totalOutput.Text = "label1";
             // 
             // calculateChange
             // 
-            this.calculateChange.BackColor = System.Drawing.Color.DarkRed;
+            this.calculateChange.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.calculateChange.Enabled = false;
+            this.calculateChange.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.calculateChange.FlatAppearance.BorderSize = 4;
             this.calculateChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateChange.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateChange.ForeColor = System.Drawing.Color.Gold;
@@ -233,9 +234,8 @@
             this.changeOutput.AutoSize = true;
             this.changeOutput.Location = new System.Drawing.Point(565, 323);
             this.changeOutput.Name = "changeOutput";
-            this.changeOutput.Size = new System.Drawing.Size(35, 13);
+            this.changeOutput.Size = new System.Drawing.Size(0, 13);
             this.changeOutput.TabIndex = 18;
-            this.changeOutput.Text = "label1";
             // 
             // receiptOutput
             // 
@@ -249,6 +249,10 @@
             // printReceipt
             // 
             this.printReceipt.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.printReceipt.Enabled = false;
+            this.printReceipt.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.printReceipt.FlatAppearance.BorderSize = 4;
+            this.printReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printReceipt.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printReceipt.ForeColor = System.Drawing.Color.Gold;
             this.printReceipt.Location = new System.Drawing.Point(388, 373);
@@ -262,6 +266,10 @@
             // newOrder
             // 
             this.newOrder.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.newOrder.Enabled = false;
+            this.newOrder.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.newOrder.FlatAppearance.BorderSize = 4;
+            this.newOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newOrder.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newOrder.ForeColor = System.Drawing.Color.Gold;
             this.newOrder.Location = new System.Drawing.Point(711, 424);
