@@ -205,7 +205,9 @@
             // 
             // calculateChange
             // 
-            this.calculateChange.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.calculateChange.BackColor = System.Drawing.Color.DarkRed;
+            this.calculateChange.Enabled = false;
+            this.calculateChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateChange.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateChange.ForeColor = System.Drawing.Color.Gold;
             this.calculateChange.Location = new System.Drawing.Point(388, 268);
@@ -268,6 +270,7 @@
             this.newOrder.TabIndex = 21;
             this.newOrder.Text = "New Order";
             this.newOrder.UseVisualStyleBackColor = false;
+            this.newOrder.Click += new System.EventHandler(this.newOrder_Click);
             // 
             // Form1
             // 

@@ -123,5 +123,26 @@ namespace CashRegister
             receiptOutput.Text += $"\n\n Have a Nice Day!!";
 
         }
+
+        private void newOrder_Click(object sender, EventArgs e)
+        {
+            airpodsInput.Clear();
+            phonesInput.Clear();
+            laptopsInput.Clear();
+
+            subtotalOutput.Text = "";
+            taxOutput.Text = "";
+            totalOutput.Text = "";
+
+            tenderedInput.Clear();
+            changeOutput.Text = "";
+
+            receiptOutput.Text = "";
+
+            calculateChange.Enabled = false;
+            printReceipt.Enabled = false;
+
+            calculateChange.ForeColor = Color.Orange;
+        }
     }
 }
