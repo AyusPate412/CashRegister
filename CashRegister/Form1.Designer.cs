@@ -239,12 +239,15 @@
             // 
             // receiptOutput
             // 
+            this.receiptOutput.AutoSize = true;
             this.receiptOutput.BackColor = System.Drawing.Color.White;
+            this.receiptOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptOutput.ForeColor = System.Drawing.Color.Black;
-            this.receiptOutput.Location = new System.Drawing.Point(681, 0);
+            this.receiptOutput.Location = new System.Drawing.Point(760, 47);
             this.receiptOutput.Name = "receiptOutput";
-            this.receiptOutput.Size = new System.Drawing.Size(303, 421);
+            this.receiptOutput.Size = new System.Drawing.Size(0, 19);
             this.receiptOutput.TabIndex = 19;
+            this.receiptOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // printReceipt
             // 
